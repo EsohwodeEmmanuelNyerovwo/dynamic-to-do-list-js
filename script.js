@@ -1,15 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
     //Select Element
-    const addButton = document.getElementById('add-task-btn');
     const taskInput = document.getElementById('task-input');
     const taskList = document.getElementById('task-list');
+    const addButton = document.getElementById('add-task-btn');
 
     //function to add task
     function addTask() {
         //check if textbox is empty and also perform the trim function
-        const taskText = (taskInput.value || '').trim();
-        console.log(taskText);
-        if (!taskText) {
+        const taskText = (taskInput.value);
+        if (taskText === ''.trim()) {
             alert('Enter a task');
             return;
         }
