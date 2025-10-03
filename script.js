@@ -7,10 +7,9 @@ document.addEventListener('DOMContentLoaded', function () {
     //function to add task
     function addTask() {
         //check if textbox is empty and also perform the trim function
-        const taskText = (taskInput.value).trim();
-        if (taskText === '') {
+        const taskText = taskInput.value.trim();
+        if (taskText === "") {
             alert('Enter a task');
-            return;
         }
         else {
             //create the li element
