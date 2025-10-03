@@ -11,23 +11,22 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log(taskText);
         if (!taskText) {
             alert('Enter a task');
+            return;
         }
-        else {
-            //create the li element
-            const li = document.createElement('li');
-            li.textContent = taskText;
-            const button = document.createElement('button');
-            button.textContent = 'Remove';
-            button.className = 'remove-btn';
-            button.onclick = function () {
-                taskList.removeChild(li);
-            }
-            li.appendChild(button);
-            taskList.appendChild(li);
+        //create the li element
+        const li = document.createElement('li');
+        li.textContent = taskText;
+        const removeBtn = document.createElement('button');
+        removeBtn.textContent = 'Remove';
+        removeBtn.className = 'remove-btn';
+        removeBtn.onclick = function () {
+            taskList.removeChild(li);
+        }
+        li.appendChild(removeBtn);
+        taskList.appendChild(li);
 
-            //clear the input
-            taskInput.value = '';
-        }
+        //clear the input
+        taskInput.value = '';
     }
     //Attach EventListeners
     addButton.addEventListener('click', (event) => {
