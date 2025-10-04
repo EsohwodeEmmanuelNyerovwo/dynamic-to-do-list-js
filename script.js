@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.setItem('tasks', JSON.stringify(tasks));
     }
 
-    function loadTask() {
+    function loadTasks() {
         const storedTasks = localStorage.getItem('tasks');
         if (storedTasks) {
             tasks = JSON.parse(storedTasks);
@@ -61,5 +61,5 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     })
 
-    loadTask();
+    loadTasks();
 })
